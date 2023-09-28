@@ -12,8 +12,8 @@
 {% endif %}
 
 <script>
-    let coordinatesLatitude = parseInt("{{ page.map_coordinates_latitude }}")
-    let coordinatesLongitude = parseInt("{{ page.map_coordinates_longitude }}")
+    let coordinatesLatitude = parseFloat("{{ page.map_coordinates_latitude }}")
+    let coordinatesLongitude = parseFloat("{{ page.map_coordinates_longitude }}")
 
     let zoom = "{{ page.map_zoom }}"
 
