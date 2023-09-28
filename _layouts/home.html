@@ -23,21 +23,9 @@
                 <h1>{{ page.landing-title }}</h1>
             </header>
             <div class="content">
-                <div id="map" style=" width: 100%; height: 300px;"></div>
-                <script>
-                var map = L.map('map').setView([-23.5505, -46.6333], 13);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 19,
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                }).addTo(map);
-
-                function onMapClick(e) {
-                    var newPageUrl = "http://localhost:4000/forty-jekyll-theme/elements.html";  
-                    window.location.href = newPageUrl;
-                }
-
-                map.on('click', onMapClick);
-                                </script>
+                {% if page.show_map %}
+                    {% include map.html %}
+                {% endif %}
                 <p style="text-transform: uppercase;">{{ site.description }}</p>
                 <ul class="actions">
                     <li><a href="#one" class="button next scrolly">Explore</a></li>
