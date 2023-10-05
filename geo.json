@@ -1,0 +1,76 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "lote_cidadao.2000363",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -46.63746322,
+                            -23.54791765
+                        ],
+                        [
+                            -46.63776543,
+                            -23.54767577
+                        ],
+                        [
+                            -46.63743531,
+                            -23.54732869
+                        ],
+                        [
+                            -46.63742283,
+                            -23.54733577
+                        ],
+                        [
+                            -46.63713354,
+                            -23.54756763
+                        ],
+                        [
+                            -46.63746322,
+                            -23.54791765
+                        ]
+                    ]
+                ]
+            },
+            "geometry_name": "ge_poligono",
+            "properties": {
+                "cd_identificador": 2000363,
+                "cd_identificador_original_lote": 8891850,
+                "cd_setor_fiscal": "005",
+                "cd_tipo_quadra": "F",
+                "tx_tipo_quadra": "FISCAL",
+                "cd_quadra_fiscal": "001",
+                "cd_subquadra_fiscal": null,
+                "cd_condominio": "01",
+                "cd_tipo_lote": "F",
+                "tx_tipo_lote": "FISCAL",
+                "cd_lote": "0000",
+                "cd_situacao": 1,
+                "cd_digito_sql": null,
+                "cd_logradouro": "156035",
+                "nm_logradouro_completo": "PC DO PATRIARCA",
+                "cd_numero_porta": "15",
+                "tx_complemento_endereco": null,
+                "tx_situ_lote": null,
+                "cd_tipo_uso_imovel": "XX",
+                "dc_tipo_uso_imovel": "Condomínio",
+                "cd_tipo_terreno_imovel": 99,
+                "qt_area_terreno": 2024,
+                "qt_area_construida": null
+            }
+        }
+    ],
+    "totalFeatures": 1,
+    "numberMatched": 1,
+    "numberReturned": 1,
+    "timeStamp": "2023-10-04T16:57:26.720Z",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+    }
+}

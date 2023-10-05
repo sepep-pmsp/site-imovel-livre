@@ -9,8 +9,8 @@ show_tile: false
 show_map: preview
 map_redirect: true
 map_redirect_url: http://localhost:4000/imovel-livre/generic.html
-map_coordinates_latitude: -23.5419378322
-map_coordinates_longitude: -46.6358841231
+map_coordinates_latitude: -23.54733577
+map_coordinates_longitude: -46.63742283
 map_zoom: 19
 ---
 
