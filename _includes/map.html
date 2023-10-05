@@ -14,13 +14,12 @@
 {% endif %}
 
 <script>
+
     async function createMap() {
         let coordinatesLatitude = parseFloat("{{ page.map_coordinates_latitude }}");
         let coordinatesLongitude = parseFloat("{{ page.map_coordinates_longitude }}");
         let zoom = "{{ page.map_zoom }}";
-    
-        let geojsonFeature = {};
-    
+        
         var map = L.map('map').setView([coordinatesLatitude, coordinatesLongitude], zoom);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -37,13 +36,26 @@
                 throw new Error('Erro na requisição');
             }
             const data = await response.json();
-            geojsonFeature = data;
+            let geojsonFeature = data;
+
             console.log(geojsonFeature);
-    
+            
+
             L.geoJSON(geojsonFeature).addTo(map);
-            let pol = L.polygon(geojsonFeature.features[0].geometry.coordinates);
+
+
+            let polCoordinates = geojsonFeature.features[0].geometry.coordinates
+
+            polCoordinates[0] = polCoordinates[0].map( c => c.reverse())
+
+
+            console.log(geojsonFeature);
+
+      
+            let pol = L.polygon(polCoordinates);
+
+
             map.fitBounds(pol.getBounds());
-            L.geoJSON(geojsonFeature).addTo(map);
         } catch (error) {
             console.error(error);
         }
